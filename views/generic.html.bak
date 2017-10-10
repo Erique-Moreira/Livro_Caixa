@@ -1,0 +1,15 @@
+{{extend 'layout2.html'}}
+{{block content}}
+<body>
+    
+
+<br><br>
+      <div class="panel panel-default">   
+      <div class="panel-heading">Cadastrar Gasto - {{=' '.join(x.capitalize() for x in request.function.split('_'))}}</div>
+          <div class="col-md-7">
+      <div class="panel-body">
+          <div class="col-sm-8">
+          {{=formulario}}
+          </div></div><br><br>
+</body>
+{{end content}}

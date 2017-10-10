@@ -1,0 +1,34 @@
+{{extend "layout2.html"}}
+
+   {{block content}} 
+<div class="panel panel-default">
+  <div class="panel-heading">Cadastrar Gastos</div>
+  <div class="panel-body">
+
+   <h1>
+       <center>CADASTRAR GASTOS</center>
+       
+    </h1>
+    <center><br>
+        {{=A('Aluguel', _href=URL('aluguel'), **{'_role':'button', '_class':"btn btn-success btn_sm"})}} 
+      {{=A('Dental', _href=URL('dental'), **{'_role':'button', '_class':"btn btn-success"})}}
+    {{=A('Auxiliar', _href=URL('auxiliar'), **{'_role':'button', '_class':"btn btn-success"})}} 
+      {{=A('Agua', _href=URL('agua'), **{'_role':'button', '_class':"btn btn-success"})}} 
+    {{=A('Energia Elétrica', _href=URL('luz'), **{'_role':'button', '_class':"btn btn-success"})}} 
+        {{=A('Lixo Hospitalar', _href=URL('lixo'), **{'_role':'button', '_class':"btn btn-success"})}} </center> <br> <center>
+    {{=A('Protético', _href=URL('protetico'), **{'_role':'button', '_class':"btn btn-success"})}} 
+    {{=A('Impostos e Taxas', _href=URL('impostos'), **{'_role':'button', '_class':"btn btn-success"})}} 
+    {{=A('Taxas Bancárias', _href=URL('taxas'), **{'_role':'button', '_class':"btn btn-success"})}} 
+    {{=A('Papelaria', _href=URL('papelaria'), **{'_role':'button', '_class':"btn btn-success"})}}
+    {{=A('Manutenção', _href=URL('manutencao'), **{'_role':'button', '_class':"btn btn-success"})}} </center> <br> <center>
+
+    {{=A('Distribuidora', _href=URL('distribuidora'), **{'_role':'button', '_class':"btn btn-success"})}} 
+    {{=A('Telefone', _href=URL('telefone'), **{'_role':'button', '_class':"btn btn-success"})}} 
+    {{=A('FGTS', _href=URL('fgts'), **{'_role':'button', '_class':"btn btn-success"})}} 
+    {{=A('INSS', _href=URL('inss'), **{'_role':'button', '_class':"btn btn-success"})}} 
+    {{=A('Marketing', _href=URL('marketing'), **{'_role':'button', '_class':"btn btn-success"})}} 
+    {{=A('Outros', _href=URL('outros'), **{'_role':'button', '_class':"btn btn-success"})}} 
+    {{=A('Início', _href=URL('default', 'index'), **{'_role':'button', '_class':"btn btn-success"})}} </center>
+    </li>
+</div>
+{{end content}}

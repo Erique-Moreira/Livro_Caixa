@@ -1,0 +1,66 @@
+# -*- coding: utf-8 -*-
+
+def novo_cads():
+    formulario = SQLFORM.factory(Field('meses', 'string', label = 'Escolha o mês : ', requires=IS_IN_SET(['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'])),
+                                Field('anos', 'string', label = 'Escolha o ano : ', requires=IS_IN_SET(['2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'])),)
+    if formulario.process().accepted:
+        a = (formulario.vars.meses)
+        b = (formulario.vars.anos)
+        db.livro.insert(data=a+" de "+b)
+    return dict(formulario=formulario)
+
+def editar_relat():
+    bt_relat = [ lambda row:A(T('Relatório Mensal'),_class="btn btn-success", _href=URL("default","relat_res",user_signature=True,args=[row.id]))]
+    
+    grade = SQLFORM.smartgrid(db.livro, fields = [db.livro.data], csv = False, deletable=False, links = bt_relat)
+    return dict(grade = grade)
+
+def relatorios():
+    return dict()
+
+def relat_res():
+    try:
+        meses = request.vars.meses
+        anos = request.vars.anos
+        for rows in db(db.livro.data == meses+" de "+anos).select(db.livro.id):
+            ler = rows.id
+            x = db.livro[ler]
+        
+            a = x.aluguel
+            b = x.dental
+            c = x.auxiliar
+            d = x.agua
+            e = x.luz
+            f = x.lixo
+            g = x.protetico
+            h = x.manutencao
+            i = x.papelaria
+            j = x.distribuidora
+            k = x.impostos
+            l = x.telefone
+            m = x.taxas
+            n = x.fgts
+            o = x.inss
+            p = x.marketing
+            q = x.outros
+            r = x.entrada1
+            s = x.entrada2
+            t = x.entrada3
+            g_tot = (a+b+c+d+e+f+g+h+i+j+k+l+m+n+o+p+q)
+            e_tot = (r + s+ t)
+            saldo = (e_tot - g_tot)
+            c_hora = (g_tot/210)
+    except:
+        redirect(URL('default','index')) 
+
+    return dict(meses=meses, anos=anos,a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h, i=i, j=j, k=k, l=l, m=m, n=n, o=o, p=p, q=q, r=r, s=s, t=t,g_tot = g_tot, e_tot = e_tot, saldo=saldo, c_hora=c_hora,)
+    
+    return dict()
+
+def ordem():
+    for lista in db(db.livro).select(orderby=db.livro.data):
+        datas = lista
+        x = (LI(datas.data))
+        response.write (x)
+       
+    return dict()

@@ -1,0 +1,18 @@
+{{extend "layout2.html"}}
+{{block content}}
+<body>
+    <div class="panel panel-default">
+    <div class="panel-heading"></div>
+    <div class="panel-body">
+           
+        <h1> <center>CADASTRAR ENTRADAS</center> </h1>
+        
+    <center>
+    {{=A('Érique', _href=URL('entr_1'), **{'_role':'button', '_class':"btn btn-success btn-sm"})}} 
+    {{=A('Patricia', _href=URL('entr_2'), **{'_role':'button', '_class':"btn btn-success btn-sm"})}} 
+    {{=A('Ortodontia', _href=URL('entr_3'), **{'_role':'button', '_class':"btn btn-success btn-sm"})}}
+    {{=A('Início', _href=URL('default', 'index'), **{'_role':'button', '_class':"btn btn-success btn-sm"})}}    
+</center>
+        </div></div>
+</body>
+{{end content}}

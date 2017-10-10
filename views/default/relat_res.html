@@ -1,0 +1,168 @@
+{{extend "layout2.html"}}
+{{block content}}
+
+<body>
+    {{=BR()*2}}
+    <div class="panel panel-default">
+  <div class="panel-heading"></div>
+  <div class="panel-body"> 
+      <h1><center>
+          Relatório de {{=y}}</center>
+      </h1>
+        </div> </div> {{=BR()*2}}
+    
+
+<left>
+ <div class="row">
+     <div class="col-md-4">
+  <h2>Gastos do Mês</h2>
+  <p>{{=y}}</p>            
+  <table class="table table-hover">
+      
+    <thead>
+      <tr>
+        <th>Gastos</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Aluguel</td>
+        <td>R$ {{=a}}</td>
+      </tr>
+      <tr>
+        <td>Auxiliar</td>
+        <td>{{=("R$ %.2f")% c}}</td>
+      </tr>
+      <tr>
+        <td>Dental</td>
+        <td>{{=("R$ %.2f")% b}}</td>
+      </tr>
+         <tr>
+        <td>Água</td>
+        <td>{{=("R$ %.2f")% d}}</td>
+      </tr>
+         <tr>
+        <td>Energia Elétrica</td>
+        <td>{{=("R$ %.2f")% e}}</td>
+      </tr>
+         <tr>
+        <td>Lixo Hospitalar</td>
+        <td>{{=("R$ %.2f")% f}}</td>
+      </tr>
+         <tr>
+        <td>Protético</td>
+        <td>{{=("R$ %.2f")% g}}</td>
+      </tr>
+         <tr>
+        <td>Manutenção</td>
+        <td>{{=("R$ %.2f")% h}}</td>
+      </tr>
+         <tr>
+        <td>Papelaria</td>
+        <td>{{=("R$ %.2f")% i}}</td>
+      </tr>
+         <tr>
+        <td>Distribuidora</td>
+        <td>{{=("R$ %.2f")% j}}</td>
+      </tr>
+         <tr>
+        <td>Impostos e taxas</td>
+        <td>{{=("R$ %.2f")% k}}</td>
+      </tr>
+         <tr>
+        <td>Telefone</td>
+        <td>{{=("R$ %.2f")% l}}</td>
+      </tr>
+         <tr>
+        <td>Taxas Bancárias</td>
+        <td>{{=("R$ %.2f")% m}}</td>
+      </tr>
+         <tr>
+        <td>FGTS</td>
+        <td>{{=("R$ %.2f")% n}}</td>
+      </tr>
+         <tr>
+        <td>INSS</td>
+        <td>{{=("R$ %.2f")% o}}</td>
+      </tr>
+         <tr>
+        <td>Marketing</td>
+        <td>{{=("R$ %.2f")% p}}</td>
+      </tr>
+         <tr>
+        <td>Outros</td>
+        <td>{{=("R$ %.2f")% q}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+     </left>
+    <center>
+     <div class=" row">
+         <div class="col-md-4">
+             <h2>Receitas do Mês</h2>
+  <p>{{=y}}</p>            
+  <table class="table table-hover">
+      
+    <thead>
+      <tr>
+        <th>Entradas</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Entrada 1</td>
+        <td>{{=("R$ %.2f")% r}}</td>
+      </tr>
+      <tr>
+        <td>Entrada 2</td>
+        <td>{{=("R$ %.2f")% s}}</td>
+      </tr>
+      <tr>
+        <td>Entrada 3</td>
+        <td>{{=("R$ %.2f")% t}}</td>
+      </tr>
+      </center>
+      </tbody>
+             </table>
+         </div>
+    
+    <right>
+     <div class=" row">
+         <div class="col-md-4">
+             <h2>Relatório</h2>
+  <p>{{=y}}</p>            
+  <table class="table table-hover">
+      
+    <thead>
+      <tr>
+        <th>Resultados</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Gasto Total</td>
+        <td>{{=("R$ %.2f")% g_tot}}</td>
+      </tr>
+      <tr>
+        <td>Receita Bruta</td>
+        <td>{{=("R$ %.2f")% e_tot}}</td>
+      </tr>
+      <tr>
+        <td>Saldo</td>
+        <td>{{=("R$ %.2f")% saldo}}</td>
+      </tr>
+        <tr>
+        <td>Valor da Hora Clínica</td>
+        <td>{{=("R$ %.2f")% c_hora}}</td>
+      </tr>
+      </right>
+      </tbody>
+             </table>
+         </div>
+    {{end content}}
+    </body>

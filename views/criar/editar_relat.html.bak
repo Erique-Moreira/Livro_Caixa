@@ -1,0 +1,13 @@
+{{extend 'layout2.html'}}
+{{block content}}
+<body>
+    <br>
+    <div class="panel panel-default">
+   <div class="panel-heading"></div>
+   <div class="panel-body">
+       <h1>
+           EDITAR RELATÓRIOS MENSAIS
+       </h1>
+       {{=grade}}
+        </div></div><br><br>
+</body>

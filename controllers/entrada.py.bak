@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+@auth.requires_login()
+def cad_ent():
+    if db(db.livro.data == mes+" de "+ano).isempty():   
+        db.livro.insert(data=mes+" de "+ano)
+    return dict()
+
+
+@auth.requires_login()
+def entr_1():
+    for rows in db(db.livro.data == mes+" de "+ano).select(db.livro.id):
+        a = rows.id
+        x = db.livro[a]
+        en = x.entrada1
+    formulario = SQLFORM.factory(Field('entrada1', 'float', label = 'Érique,  R$ : '), )
+    if formulario.process().accepted:
+        e = float(formulario.vars.entrada1)
+        en = e + en
+        db(db.livro.data == mes+" de "+ano).update(entrada1=en)
+        redirect(URL('cad_ent'))
+    return dict(formulario=formulario)
+
+@auth.requires_login()
+def entr_2():
+    for rows in db(db.livro.data == mes+" de "+ano).select(db.livro.id):
+        a = rows.id
+        x = db.livro[a]
+        en = x.entrada2
+    formulario = SQLFORM.factory(Field('entrada2', 'float', label = 'Patricia,  R$ : '), )
+    if formulario.process().accepted:
+        e = float(formulario.vars.entrada2)
+        en = e + en
+        db(db.livro.data == mes+" de "+ano).update(entrada2=en)
+        redirect(URL('cad_ent'))
+    return dict(formulario=formulario)
+
+@auth.requires_login()
+def entr_3():
+    for rows in db(db.livro.data == mes+" de "+ano).select(db.livro.id):
+        a = rows.id
+        x = db.livro[a]
+        en = x.entrada3
+    formulario = SQLFORM.factory(Field('entrada3', 'float', label = 'Ortodontia,  R$ : '), )
+    if formulario.process().accepted:
+        e = float(formulario.vars.entrada3)
+        en = e + en
+        db(db.livro.data == mes+" de "+ano).update(entrada3=en)
+        redirect(URL('cad_ent'))
+    return dict(formulario=formulario)

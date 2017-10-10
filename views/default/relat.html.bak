@@ -1,0 +1,54 @@
+{{extend "layout2.html" }}
+{{block content}}
+
+
+    <div class="container">
+        <div class="panel panel-default">
+          <div class="panel-heading">RELATÓRIO GERAL</div>
+          <div class="panel-body">
+    
+    <center>
+        <h1>
+            RELATÓRIO GERAL
+            <center>
+                {{=A(mes+" de "+ano)}}
+            </center>
+        </h1>
+    </center><left>
+
+    <b>GASTOS DO MÊS</b>
+    {{=BR()*2}}
+  
+
+        <li>{{=("Aluguel R$ %.2f")% a}}</li>
+        <li>{{=("Auxiliar R$ %.2f")% c}}</li>
+        <li>{{=("Dental R$ %.2f")% b}}</li>
+        <li>{{=("Água R$ %.2f")% d}}</li>
+        <li>{{=("Energia Elétrica R$ %.2f")% e}}</li>
+        <li>{{=("Lixo Hospitalas R$ %.2f")% f}}</li>
+        <li>{{=("Protético R$ %.2f")% g}}</li>
+        <li>{{=("Manutenção R$ %.2f")% h}}</li>
+        <li>{{=("Papelaria R$ %.2f")% i}}</li>
+        <li>{{=("Distribuidora R$ %.2f")% j}}</li>
+        <li>{{=("Impostos e Taxas R$ %.2f")% k}}</li>
+        <li>{{=("Telefone R$ %.2f")% l}}</li>
+        <li>{{=("Taxas Bancárias R$ %.2f")% m}}</li>
+        <li>{{=("FGTS R$ %.2f")% n}}</li>
+        <li>{{=("INSS R$ %.2f")% o}}</li>
+        <li>{{=("Marketing R$ %.2f")% p}}</li>
+        <li>{{=("Outros R$ %.2f")% q}}</li>
+    <hr></hr>
+        {{=("Total de gastos foi de R$ %.2f")% g_tot}} 
+    <hr> </hr>
+        <b>ENTRADAS DO MÊS</b>
+    {{=BR()*2}}
+        <li>{{=("Érique R$ %.2f")% r}}</li>
+        <li>{{=("Patricia R$ %.2f")% s}}</li>
+        <li>{{=("Ortodontia R$ %.2f")% t}}</li>
+    <hr></hr>
+        <li>{{=("Total de receitas: R$ %.2f")% e_tot}}</li>
+        <li>{{=("Saldo do mês: R$ %.2f")% saldo}}</li>
+    <hr></hr>
+    </left>
+</center>
+{{end content}}

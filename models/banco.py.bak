@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+
+
+
+db.define_table('dados',
+                Field('data', 'string',),
+                Field('aluguel', 'float', default = 0),
+                Field('dental', 'float', default=0),)
+
+db.define_table('livro',
+                Field('data', 'string', unique=True),
+                Field('aluguel', 'float', default = 0),
+                Field('auxiliar', 'float', default = 0),
+                Field('dental', 'float', default = 0),
+                Field('luz', 'float', default = 0),
+                Field('agua', 'float', default = 0),
+                Field('lixo', 'float', default = 0),
+                Field('telefone', 'float', default = 0),
+                Field('protetico', 'float', default = 0),
+                Field('impostos', 'float', default = 0),
+                Field('taxas', 'float', default = 0),
+                Field('papelaria', 'float', default = 0),
+                Field('manutencao', 'float', default = 0),
+                Field('distribuidora', 'float', default = 0),
+                Field('fgts', 'float', default = 0),
+                Field('inss', 'float', default = 0),
+                Field('marketing', 'float', default = 0),
+                Field('outros', 'float', default = 0),
+                Field('entrada1', 'float', default = 0),
+                Field('entrada2', 'float', default = 0),
+                Field('entrada3', 'float', default = 0),)

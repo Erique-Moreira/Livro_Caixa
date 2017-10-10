@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+from datetime import date
+
+hj = date.today()
+ano = str(hj.year)
+dia = str(hj.day)
+
+if hj.month == 1:
+    mes = ("janeiro")
+elif hj.month == 2:
+    mes = ("fevereiro")
+elif hj.month == 3:
+    mes = ("março")
+elif hj.month == 4:
+    mes = ("abril")
+elif hj.month == 5:
+    mes = ("maio")
+elif hj.month == 6:
+    mes = ("junho")
+elif hj.month == 7:
+    mes = ("julho")
+elif hj.month == 8:
+    mes = ("agosto")
+elif hj.month == 9:
+    mes = ("setembro")
+elif hj.month == 10:
+    mes = ("outubro")
+elif hj.month == 11:
+    mes = ("novembro")
+elif hj.month == 12:
+    mes = ("dezembro")
+
+db = DAL('sqlite://livrocaixa.edb')

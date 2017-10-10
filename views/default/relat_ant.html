@@ -1,0 +1,21 @@
+{{extend "layout2.html"}}
+{{block content}}
+<body>
+    {{=BR()*2}}
+    <div class="panel panel-default">
+  <div class="panel-heading"></div>
+  <div class="panel-body">
+    
+    <h1>
+       <center>RELATÓRIOS ANTERIORES</center>
+       
+    </h1>
+    <center>
+    {{=A('Criar Relatório', _href=URL('criar','novo_cads'), **{'_role':'button', '_class':"btn btn-success"})}} 
+    {{=A('Ver Relatórios', _href=URL('criar','relatorios'), **{'_role':'button', '_class':"btn btn-success"})}} 
+    {{=A('Editar Relatórios', _href=URL('criar','editar_relat'), **{'_role':'button', '_class':"btn btn-success"})}}   </center>
+        </div></div>
+    {{=BR()*8}}
+   
+{{end content}}
+</body>
